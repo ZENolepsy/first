@@ -3,38 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fist shop</title>
+    <title>Market</title>
 
     <style>
-        div{
-            border: 1px solid black;
-        }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    div{
+        border: 0.5px solid black;
+    }
+
+    .navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+    .logo{
+        padding-left: 50px;
+    }
+.navigation > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a{
+    padding: 55px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.s_page{
+    height: 50px;
+    width: 500px;
+}
+
+.s_page a{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search_menu{
+    color: black;
+    font-weight: bold;
+}
+
+.search{
+    background-color: rgb(137, 199, 44);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search_menu > input{
+    border: 0;
+}
+
+    .header{
+        height: 400px;
+        /* 내부 요소의 크기가 더 커서 삐져나오는 경우에 대한 style 적용 */
+        /* scroll 스크롤바가 생기게 함 */
+        /* hidden 삐져나오는 부분 안보이게 함 */
+        overflow: hidden;
+        position: relative;
+        background-color: #EEEEEE;
+    }
+
+    .s_top{
+        /* 중앙 정렬 삼총사.... display: flex; // justify-content: center // align-items: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .item{
+        /* 부모(row) 기준 1/3 가량 되는 길이 */
+        /* 부모 크기의 1/3 에서 여백으로 줄 10px을 뺀 크기만큼 width를 준다 */
+        width: calc(100%/3 - 10px);
+        box-shadow: 4px 4px 4px 4px #DDDDDD;
+    }
+
+    .item img{
+        width: 100%;
+        transition-duration: 0.5s;
+    }
+
+    .item img:hover{
+        width: 120%;
+    }
+
+    .item > div:nth-child(1){
+        height: 350px;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }  
+    
+    .item h2{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     </style>
-
-
 </head>
+
 <body>
-    
 
-    <div class="navigation">
-        <div class="banner">
+    <div class="container"> <!--container 열기-->
+        <div class="navigation"> <!--navigation 열기-->
+            <div class="logo">
+                <img src="https://themewagon.github.io/ogani/img/logo.png" alt="">
+            </div>
+            <div class="s_page">
+                <a href="./index.html">HOME</a>
+                <a href="./shop.html">SHOP</a>
+                <a href="./blog.html">BLOG</a>
+            </div>
+            <div>
+                <div class="s_heart">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="s_basket">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket3-fill" viewBox="0 0 16 16">
+                            <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
+                        </svg>
+                    </button>
+                    <span>
+                        item:$150.00
+                    </span>
+                </div>
+            </div>
+        </div> <!--navigation 닫기--> 
+
+        <div class="s_top"> 
+            <div>
+                <span class="search_menu"> ALL Categories</span>
+                <input type="text" placeholder="What do u need?">
+                <button class="search">SEARCH</button>
+            </div>
+            
+            <div>
+                <div class="main_menu">
+
+                </div>
+                <div class="main_banner">
+                    <div class="main_banner_text">
+                        fruit fresh
+                    </div>
+                    <div class="main_banner_image">
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div> 
+
+        <div class="row"> <!--row 열기-->
+            
+            <div class="item"> <!--item 열기-->
+                <div>
+                    <img src="https://src.hidoc.co.kr/image/lib/2019/6/12/20190612112121719_0.jpg" alt="">
+                </div>
+                <div>
+                    <h2>FRESH FRUIT</h2>
+                </div>
+            </div> <!--item 닫기-->
+
+            <div class="item"> <!--item 열기-->
+                <div>
+                    <img src="https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/1270604745/B.jpg?435000000" alt="">
+                </div>
+                <div>
+                    <h2>DRINK FRUIT</h2>
+                </div>
+            </div> <!--item 닫기-->
+
+            <div class="item"> <!--item 열기-->
+                <div>
+                    <img src="https://t3.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/4dit/image/c2aSPYNpw7ZWOwlLKtMjKnCecbI" alt="">
+                </div>
+                <div>
+                    <h2>DRIED FRUIT</h2>
+                </div>
+            </div> <!--item 닫기-->
+
+        </div> <!--row 닫기-->
 
         </div>
-        <div class="menu">
 
-        </div>
-        <div class="">
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
+    </div> <!-- container 닫기-->
 </body>
 </html>
