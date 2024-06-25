@@ -13,46 +13,124 @@
     }
 
     div{
-        border: 0.5px solid black;
+        border: 0px solid black;
     }
 
-    .navigation{
+    .s_navigation{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-    .logo{
-        padding-left: 50px;
+    .s_top_banner{
+        display: flex;
+        height: 30px;
+        padding-top: 10px;
+        padding-left: 55px;
+        padding-bottom: 10px;
+        background-color: #EEEEEE;
+        font-size: 15px;
     }
-.navigation > div{
+
+    .s_top_banner_mail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 15px;
+        border-right: 0.5px solid grey;
+        margin-right: 15px;
+    }
+
+    .s_top_banner_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 15px;
+        border-right: 0.5px solid grey;
+        margin-right: 15px;
+    }
+
+    .s_logo{
+        margin-left: 55px;
+        margin-top: 25px;
+    }
+
+
+    .s_navigation > div{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navigation a{
-    padding: 55px;
+    .s_navigation li a{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50px;
+    height: 50px;
     text-decoration: none;
+    font-size: 20px;
     color: black;
     font-weight: bold;
+    
 }
 
-.s_page{
-    height: 50px;
-    width: 500px;
-}
-
-.s_page a{
+.s_page{    
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
+
 }
 
-.search_menu{
+    .s_page li a{
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+
+.s_search_box{
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: first baseline;
+        width: 600px;
+        height: 50px;
+        border: 0.5px solid grey;
+    }
+
+    .s_search_box text{
+        font-size: 35px;
+    }
+
+.s_search_all_text{
     color: black;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid grey;
+    padding-right: 15px;
 }
 
-.search{
+
+.s_search_box > input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 15px;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-right: 0.5px solid grey;
+}
+
+
+.s_search{
+    height: 100%;
     background-color: rgb(137, 199, 44);
     color: white;
     font-size: 20px;
@@ -61,21 +139,78 @@
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.search_menu > input{
-    border: 0;
-}
 
-    .header{
-        height: 400px;
-        /* 내부 요소의 크기가 더 커서 삐져나오는 경우에 대한 style 적용 */
-        /* scroll 스크롤바가 생기게 함 */
-        /* hidden 삐져나오는 부분 안보이게 함 */
-        overflow: hidden;
-        position: relative;
-        background-color: #EEEEEE;
+    .s_main_banner_image{
+        height: 100%;
+        width: 100%;
     }
+
+    
+    .s_main_menu{
+        height: 500px;
+        background-color: white;
+        display: flex;
+        
+    }
+
+    /* 좌측 메인 메뉴바 최상위 목록 */
+    .s_main_menu > li > a{
+        margin-left: 50px;
+        margin-bottom: 10px;
+        height: 50px;
+        width: 150px;
+        background-color: white;
+        border: 0.5px solid gray;
+        display: flex;
+        padding: 0 20px;
+        font-size: 17px;
+        font-weight: bold;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+        
+    /* 좌측 상단의 메인 메뉴바 */
+    .s_all_departments li a{
+        margin-left: 50px;
+        margin-bottom: 10px;
+        height: 30px;
+        width: 150px;
+        background-color: white;
+        border: 0.5px solid gray;
+        display: block;
+        padding: 0 20px;
+        font-size: 17px;
+        font-weight: bold;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    /* 좌측 상단의 메인 메뉴바 hover 효과 */
+    .s_all_departments li a:hover{
+        background-color: yellowgreen; color:white
+    }
+
+    .s_page li a:hover{
+        background-color: yellowgreen; color: white;
+    }
+
+
+    .s_main_banner{
+        padding: 15px;
+    }
+
 
     .s_top{
         /* 중앙 정렬 삼총사.... display: flex; // justify-content: center // align-items: center; */
@@ -85,24 +220,19 @@
         height: 100px;
     }
 
-    .item{
+    .s_item{
         /* 부모(row) 기준 1/3 가량 되는 길이 */
         /* 부모 크기의 1/3 에서 여백으로 줄 10px을 뺀 크기만큼 width를 준다 */
         width: calc(100%/3 - 10px);
         box-shadow: 4px 4px 4px 4px #DDDDDD;
+        background-color: #BBBBBB;
+
     }
 
-    .item img{
+
+    .s_item > div:nth-child(1){
+        height: 100%;
         width: 100%;
-        transition-duration: 0.5s;
-    }
-
-    .item img:hover{
-        width: 120%;
-    }
-
-    .item > div:nth-child(1){
-        height: 350px;
         overflow: hidden;
 
         display: flex;
@@ -110,33 +240,49 @@
         align-items: center;
     }
 
-    .row{
+    .s_row{
         display: flex;
         justify-content: space-between;
+        
     }  
     
-    .item h2{
+    .s_item a{
         
+        bottom: 5px;
+        right: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #FFFFFF;
+        border: 0.1px gray solid;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px;
     }
+
 
     </style>
 </head>
 
 <body>
-
-    <div class="container"> <!--container 열기-->
-        <div class="navigation"> <!--navigation 열기-->
-            <div class="logo">
-                <img src="https://themewagon.github.io/ogani/img/logo.png" alt="">
+    <div class="s_container"> <!--container 열기-->
+        <div class="s_top_banner">
+            <div class="s_top_banner_mail">
+                <span>hello@colorlib.com</span>
             </div>
-            <div class="s_page">
-                <a href="./index.html">HOME</a>
-                <a href="./shop.html">SHOP</a>
-                <a href="./blog.html">BLOG</a>
+            <div class="s_top_banner_text">
+                <span>Free Shipping for all Order of $99</span>
             </div>
+        </div>
+        <div class="s_navigation"> <!--navigation 열기-->
+            <div class="s_logo">
+                <a href="./index.html"><img src="https://themewagon.github.io/ogani/img/logo.png" alt=""></a>
+            </div>
+            <ul class="s_page">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./shop.html">SHOP</a></li>
+                <li><a href="./blog.html">BLOG</a></li>
+            </ul>
             <div>
                 <div class="s_heart">
                     <button>
@@ -159,56 +305,73 @@
             </div>
         </div> <!--navigation 닫기--> 
 
-        <div class="s_top"> 
-            <div>
-                <span class="search_menu"> ALL Categories</span>
+        <ul class="s_main_menu">
+            <li>
+                <a href="#">All Departments</a>
+                <ul class="s_all_departments">
+                    <li><a href="./index.html">Fresh meat</a></li> 
+                    <li><a href="./index.html">Vegetables</a></li> 
+                    <li><a href="./index.html">Fruit & Nut Gifts</a></li> 
+                    <li><a href="./index.html">Frush Berries</a></li> 
+                    <li><a href="./index.html">Ocean Foods</a></li> 
+                    <li><a href="./index.html">Butter & Eggs</a></li> 
+                    <li><a href="./index.html">Fastfood</a></li> 
+                    <li><a href="./index.html">Fresh Onion</a></li> 
+                    <li><a href="./index.html">Papayaya & Crips</a></li> 
+                    <li><a href="./index.html">Oatmeal</a></li> 
+                    <li><a href="./index.html">Fresh Bananas</a></li>
+                </ul>
+            </li>
+            <div class="s_search_box">
+                <span class="s_search_all_text">
+                    ALL Categories
+                </span>
                 <input type="text" placeholder="What do u need?">
-                <button class="search">SEARCH</button>
+                <button class="s_search">
+                    SEARCH
+                </button>
             </div>
-            
+        </ul>
+
+
             <div>
-                <div class="main_menu">
-
+                <div class="s_main_banner_text">
+                    <a href="">fruit fresh</a>
                 </div>
-                <div class="main_banner">
-                    <div class="main_banner_text">
-                        fruit fresh
-                    </div>
-                    <div class="main_banner_image">
-
-                    </div>
+                <div class="s_main_banner_image">
+                    <img src="./images/fruit_fresh.png" alt="">
                 </div>
-
             </div>
-            
-        </div> 
 
-        <div class="row"> <!--row 열기-->
+        </ul>
             
-            <div class="item"> <!--item 열기-->
+
+        <div class="s_row"> <!--row 열기-->
+            
+            <div class="s_item"> <!--item 열기-->
                 <div>
-                    <img src="https://src.hidoc.co.kr/image/lib/2019/6/12/20190612112121719_0.jpg" alt="">
+                    <img src="./images/fresh_fruit.png" alt="">
                 </div>
                 <div>
-                    <h2>FRESH FRUIT</h2>
+                    <a>FRESH FRUIT</a>
                 </div>
             </div> <!--item 닫기-->
 
-            <div class="item"> <!--item 열기-->
+            <div class="s_item"> <!--item 열기-->
                 <div>
-                    <img src="https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/1270604745/B.jpg?435000000" alt="">
+                    <img src="./images/drink_fruit.png" alt="">
                 </div>
                 <div>
-                    <h2>DRINK FRUIT</h2>
+                    <a>DRINK FRUIT</a>
                 </div>
             </div> <!--item 닫기-->
 
-            <div class="item"> <!--item 열기-->
+            <div class="s_item"> <!--item 열기-->
                 <div>
-                    <img src="https://t3.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/4dit/image/c2aSPYNpw7ZWOwlLKtMjKnCecbI" alt="">
+                    <img src="./images/dried_fruit.png" alt="">
                 </div>
                 <div>
-                    <h2>DRIED FRUIT</h2>
+                    <a>DRIED FRUIT</a>
                 </div>
             </div> <!--item 닫기-->
 

@@ -1,0 +1,80 @@
+    <div class="s_container"> <!--container 열기-->
+        <div class="s_top_banner">
+            <div class="s_top_banner_mail">
+                <span>hello@colorlib.com</span>
+            </div>
+            <div class="s_top_banner_text">
+                <span>Free Shipping for all Order of $99</span>
+            </div>
+        </div>
+        <div class="s_navigation"> <!--navigation 열기-->
+            <div class="s_logo">
+                <a href="./index.html"><img src="https://themewagon.github.io/ogani/img/logo.png" alt=""></a>
+            </div>
+            <ul class="s_page">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./shop.html">SHOP</a></li>
+                <li><a href="./blog.html">BLOG</a></li>
+            </ul>
+            <div>
+                <div class="s_heart">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="s_basket">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket3-fill" viewBox="0 0 16 16">
+                            <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
+                        </svg>
+                    </button>
+                    <span>
+                        item:$150.00
+                    </span>
+                </div>
+            </div>
+        </div> <!--navigation 닫기--> 
+
+        <ul class="s_main_menu">
+            <li>
+                <a href="#">All Departments</a>
+                <ul class="s_all_departments">
+                    <li><a href="./index.html">Fresh meat</a></li> 
+                    <li><a href="./index.html">Vegetables</a></li> 
+                    <li><a href="./index.html">Fruit & Nut Gifts</a></li> 
+                    <li><a href="./index.html">Frush Berries</a></li> 
+                    <li><a href="./index.html">Ocean Foods</a></li> 
+                    <li><a href="./index.html">Butter & Eggs</a></li> 
+                    <li><a href="./index.html">Fastfood</a></li> 
+                    <li><a href="./index.html">Fresh Onion</a></li> 
+                    <li><a href="./index.html">Papayaya & Crips</a></li> 
+                    <li><a href="./index.html">Oatmeal</a></li> 
+                    <li><a href="./index.html">Fresh Bananas</a></li>
+                </ul>
+            </li>
+            <div class="s_search_box">
+                <span class="s_search_all_text">
+                    ALL Categories
+                </span>
+                <input type="text" placeholder="What do u need?">
+                <button class="s_search">
+                    SEARCH
+                </button>
+            </div>
+        </ul>
+
+
+            <div>
+                <div class="s_main_banner_text">
+                    <a href="">fruit fresh</a>
+                </div>
+                <div class="s_main_banner_image">
+                    <img src="./images/fruit_fresh.png" alt="">
+                </div>
+            </div>
+
+        </ul>
+            
