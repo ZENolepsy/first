@@ -1,58 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>찬웅샵</title>
-
-    <style>
-
-    div{
-        border: 0.5px solid black;
-    }
-
-    .navigation{
-    display: flex;
-    justify-content: space-between;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.navigation > div{
+div {
+    border: 0px solid black;
+}
+
+.s_navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s_top_banner {
+    display: flex;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 55px;
+    padding-bottom: 10px;
+    background-color: #EEEEEE;
+    font-size: 15px;
+}
+
+.s_top_banner_mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    border-right: 0.5px solid grey;
+    margin-right: 15px;
+}
+
+.s_top_banner_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+.s_top_banner_blank{
+    width: 350px;
+}
+
+.s_top_banner_sns button{
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.s_top_banner_greywall{
+    border-right: 0.5px solid grey;
+}
+
+.s_logo {
+    margin-left: 55px;
+    margin-top: 25px;
+}
+
+.s_heart button{
+    padding-right: 15px;
+    border: none;
+    background-color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.s_basket button{
+    padding-right: 15px;
+    border: none;
+    background-color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+.s_basket{
+    margin-right: 250px;
+}
+.s_150{
+    font-weight: bold;
+}
+
+
+.s_navigation>div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.search{
-    /* 아래 테두리만 주기 */
-    border-bottom: 2px solid black;
-}
-
-.search > input{
-    /* 테두리 제거 */
-    border: 0;
-}
-
-
-.navigation a{
-    padding: 10px;
+.s_navigation li a {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50px;
+    height: 50px;
     text-decoration: none;
+    font-size: 20px;
     color: black;
     font-weight: bold;
-}
-
-.s_page{
-    height: 50px;
-    width: 500px;
 
 }
 
-.s_page a{
+.s_page {
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
+
+}
+.s_page li {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.s_page li a {
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
 }
 
-.shopnow{
-    background-color: green;
+
+.s_search_box {
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 40px;
+    border: 0.5px solid grey;
+}
+
+.s_search_box text {
+    font-size: 35px;
+}
+
+.s_search_all_text {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid grey;
+    padding-right: 15px;
+    padding-left: 50px;
+}
+
+
+.s_search_box>input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-right: 0.5px solid grey;
+}
+
+
+.s_search {
+    height: 100%;
+    background-color: rgb(137, 199, 44);
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -60,189 +177,81 @@
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-
-.footer{
-    height: 400px;
-    display: flex;
-}
-
-.footer > div{
-    height: 100%;
-    width: 50%;
-}
-
-.footer > div:nth-child(2){
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer > div:nth-child(1){
-    padding-left: 10px;
+
+.s_main_menu {
+    
+    display: flex;
+    
 }
 
-    .header{
-        height: 400px;
-        /* 내부 요소의 크기가 더 커서 삐져나오는 경우에 대한 style 적용 */
-        /* scroll 스크롤바가 생기게 함 */
-        /* hidden 삐져나오는 부분 안보이게 함 */
-        overflow: hidden;
-        position: relative;
-        background-color: #EEEEEE;
-    }
 
-    .header > img{
-        width: 100%;
-        left: 50%;
-    }
+.s_main_menu li{
+    position: relative;
+}
 
-    .header > h1{
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
+/* 좌측 메인 메뉴바 최상위 목록 */
+.s_all_departments_text {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 150px;
+    background-color: yellowgreen;
+    border: 0.5px solid gray;
+    display: flex;
+    padding: 0 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
 
-    .title{
-        /* 중앙 정렬 삼총사.... display: flex; // justify-content: center // align-items: center; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+/* 좌측 상단의 메인 메뉴바 */
+.s_all_departments li a{
+    margin-left: 50px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    border: 0.5px solid gray;
+    padding: 0 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
 
-    .item{
-        /* 부모(row) 기준 1/3 가량 되는 길이 */
-        /* 부모 크기의 1/3 에서 여백으로 줄 10px을 뺀 크기만큼 width를 준다 */
-        width: calc(100%/3 - 10px);
-        box-shadow: 4px 4px 4px 4px #DDDDDD;
-    }
+    /* a태그 내부 요소 가운데 정렬 */
+    justify-content: center;
+    align-items: center;
+    /* 안보이게 */
+    display: none;
+    text-decoration: none;
+    position: absolute;
 
-    .item img{
-        width: 100%;
-        transition-duration: 0.5s;
-    }
+}
 
-    .item img:hover{
-        width: 120%;
-    }
+/* s_main_menu 안의 li에 hover 할 경우,  s_main_menu안 li 안 a에 부여한다. */
+.s_main_menu>li:hover a{
+    display: flex;
+}
 
-    .item > div:nth-child(1){
-        height: 250px;
-        overflow: hidden;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+/* 좌측 상단의 메인 메뉴바 hover 효과 */
+.s_all_departments li a:hover {
+    background-color: yellowgreen;
+    color: white;
+    transition-duration: 0.2s;
+}
 
-    .row{
-        display: flex;
-        justify-content: space-between;
-    }  
-
-    </style>
-</head>
-
-<body>
-
-    <div class="container"> <!--container 열기-->
-        <div class="navigation"> <!--navigation 열기-->
-            <div>
-                <img src="https://themewagon.github.io/ogani/img/logo.png" alt="">
-            </div>
-            <div class="s_page">
-                <a href="./index.html">HOME</a>
-                <a href="./shop.html">SHOP</a>
-                <a href="./blog.html">BLOG</a>
-            </div>
-            <div>
-                <div class="s_heart">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="s_basket">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket3-fill" viewBox="0 0 16 16">
-                            <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
-                        </svg>
-                    </button>
-                    <span>
-                        item:$150.00
-                    </span>
-                </div>
-            </div>
-        </div> <!--navigation 닫기--> 
-
-        <div class="header"> 
-            <div>
-                <span>FRUIT FRESH</span>
-                <span>Vegetable</span>  
-                <span>100% Organic</span>
-                <span>Free Pickup and Delivery Available</span>
-                <button class="shopnow"> SHOP NOW</button>
-            </div>
-            
-            <div>
-
-            </div>
-            
-        </div> 
-
-        <div class="title"> <!--title 열기-->
-            <h1>금주 BEST 상품</h1>
-        </div> <!--title 닫기-->
-
-        <div class="row"> <!--row 열기-->
-            
-            <div class="item"> <!--item 열기-->
-                <div>
-                    <img src="https://cosmereg.com/wp-content/uploads/2023/03/beauty-g2b308465c_1920-1.jpg" alt="">
-                </div>
-                <div>
-                    <h2>벚꽃 화장품 세트</h2>
-                    <h1>56,800원</h1>
-                </div>
-            </div> <!--item 닫기-->
-
-            <div class="item"> <!--item 열기-->
-                <div>
-                    <img src="https://health.chosun.com/site/data/img_dir/2023/06/23/2023062301899_0.jpg" alt="">
-                </div>
-                <div>
-                    <h2>앰플 세트</h2>
-                    <h1>33,900원</h1>
-                </div>
-            </div> <!--item 닫기-->
-
-            <div class="item"> <!--item 열기-->
-                <div>
-                    <img src="https://www.cosmorning.com/data/photos/20230313/art_16801429693994_10a4e8.jpg" alt="">
-                </div>
-                <div>
-                    <h2>과일 화장품 세트</h2>
-                    <h1>42,600원</h1>
-                </div>
-            </div> <!--item 닫기-->
-
-        </div> <!--row 닫기-->
-
-        <div class="footer">
-            <div>
-                <h1>찬웅샵</h1>
-                <hr>
-                <h2>대전광역시 서구 xxxx</h2>
-                <h2>042-344-153x</h2>
-                <h2>akow283@gmail.com</h2>
-            </div>
-
-        </div>
-
-    </div> <!-- container 닫기-->
-</body>
-</html>
+.s_page li a:hover {
+    background-color: yellowgreen;
+    color: white;
+    transition-duration: 0.4s;
+}
