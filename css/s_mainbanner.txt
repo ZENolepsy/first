@@ -1,3 +1,5 @@
+
+<body>
     <div class="s_container"> <!--container 열기-->
         <div class="s_top_banner">
             <div class="s_top_banner_mail">
@@ -39,8 +41,8 @@
         </div> <!--navigation 닫기--> 
 
         <ul class="s_main_menu">
-            <li>
-                <a href="#">All Departments</a>
+            <li class="s_main_menu_hover">
+                <a class="s_all_departments_text" href="#">All Departments</a>
                 <ul class="s_all_departments">
                     <li><a href="./index.html">Fresh meat</a></li> 
                     <li><a href="./index.html">Vegetables</a></li> 
@@ -55,26 +57,15 @@
                     <li><a href="./index.html">Fresh Bananas</a></li>
                 </ul>
             </li>
-            <div class="s_search_box">
-                <span class="s_search_all_text">
-                    ALL Categories
-                </span>
-                <input type="text" placeholder="What do u need?">
-                <button class="s_search">
-                    SEARCH
-                </button>
-            </div>
-        </ul>
-
-
             <div>
-                <div class="s_main_banner_text">
-                    <a href="">fruit fresh</a>
-                </div>
-                <div class="s_main_banner_image">
-                    <img src="./images/fruit_fresh.png" alt="">
+                <div class="s_search_box">
+                    <span class="s_search_all_text">
+                        ALL Categories
+                    </span>
+                    <input type="text" placeholder="What do u need?">
+                    <button class="s_search">
+                        SEARCH
+                    </button>
                 </div>
             </div>
-
         </ul>
-            
