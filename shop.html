@@ -13,7 +13,7 @@
         }
 
         div {
-            border: 1px solid black;
+            border: 0px solid black;
         }
 
         .j_box {
@@ -140,6 +140,11 @@
             opacity: 100%;
         }
 
+        .j_img2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .j_img2>img {
             background-color: #d0fc5c;
         }
@@ -160,16 +165,43 @@
             text-decoration: line-through;
         }
 
-        .j_red-text2{
+        .j_red-text2 {
             color: red;
             font-size: 20px;
         }
 
-        .j_price{
+        .j_price {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+
+        .j_tap2 {
+            margin-top: 120px;
+            margin-left: 200px;
+            margin-right: 200px;
             display: flex;
             flex-direction: column;
         }
 
+        .j_circle:hover {
+            cursor: pointer;
+        }
+
+        .j_circle_color {
+            background-color: white;
+            width: 12px;
+        }
+
+        .j_tapp {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 200px;
+        }
+
+        .j_menu2 {
+            margin-right: 200px;
+        }
     </style>
 
 </head>
@@ -211,7 +243,7 @@
                 <hr>
                 <div class="j_row">
                     <div class="j_item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2382/2382621.png" alt="">
+                        <img src="./images/drink_fruit.png" alt="">
                         <span class="j_red-text">-20%</span>
                         <!-- 얘한테 hover시 변화 -->
                         <div class="j_hover">
@@ -236,7 +268,7 @@
                     </div>
 
                     <div class="j_item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2382/2382621.png" alt="">
+                        <img src="./images/dried_fruit.png" alt="">
                         <span class="j_red-text">-20%</span>
                         <!-- 얘한테 hover시 변화 -->
                         <div class="j_hover">
@@ -261,7 +293,7 @@
                     </div>
 
                     <div class="j_item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2382/2382621.png" alt="">
+                        <img src="./images/fresh_fruit.png" alt="">
                         <span class="j_red-text">-20%</span>
                         <!-- 얘한테 hover시 변화 -->
                         <div class="j_hover">
@@ -279,26 +311,128 @@
                         <div class="j_explain">
                             <span class="j_gray">Dried Fruit</span>
                             <a href="#" class="j_a1">
-                                <span>Hambuger</span>
+                                <span>Mango</span>
                             </a>
                             <h1>$30.00</h1><span class="j_a2">$36.00</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="j_price">
-                <h1>price</h1>
-                <input type="range" min="10" max="540">
-                <h1 class="j_red-text2">$10 - $540</h1>
+        </div>
+        <div class="j_tapp">
+            <div class="j_tap2">
+                <div class="j_price">
+                    <h1>price</h1>
+                    <input type="range" min="10" max="540">
+                    <h1 class="j_red-text2">$10 - $540</h1>
+                </div>
+                <div>
+                    <h1>Colors</h1>
+                    <div class="j_circle">
+                        <img class="j_circle_color"
+                            src="https://www.freeiconspng.com/thumbs/circle-png/circle-outline-png-6.png" alt="">
+                        <span>white</span>
+                        <img class="j_circle_color"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6jdcunvBK5XNZXM61eRneQMpnw80q6K9qBg&s"
+                            alt="">
+                        <span>blue</span>
+                        <br>
+                        <img class="j_circle_color"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3OsmfbBG_lMP2YPEWz-TvF-jxu0ZQXFDpjQ&s"
+                            alt="">
+                        <span>red</span>
+                        <img class="j_circle_color"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7TFZsQ1hca2GEdFPgGHiin0Ac6_T91Muliw&s"
+                            alt="">
+                        <span>gray</span>
+                        <br>
+                        <img class="j_circle_color" src="https://cdn-icons-png.flaticon.com/512/0/14.png" alt="">
+                        <span>black</span>
+                        <img class="j_circle_color"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLxoRIqk-TRI7-2iTLN7lv-MCpRyP7YIE_KQ&s"
+                            alt="">
+                        <span>green</span>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h1>Colors</h1>
-                <img class="dd"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBXOlWTaPY6aCKJR9pXPILsxd_Zp_DycENQ&s" alt="">
-                <span>white</span>
-                <span>gray</span>
-                <span>red</span>
-                <span>black</span>
+            <div class="j_menu2">
+                <div class="j_row">
+                    <div class="j_item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJL6BSNJpEMwYuv8EEK9qx66iWZb9N-0Z89A&s"
+                            alt="">
+                        <span class="j_red-text">-20%</span>
+                        <!-- 얘한테 hover시 변화 -->
+                        <div class="j_hover">
+                            <!-- 한줄로 나열 -->
+                            <div class="j_img2">
+                                <img src="https://www.freeiconspng.com/thumbs/heart-icon/valentine-heart-icon-6.png"
+                                    alt="">
+                                <img src="https://cdn4.iconfinder.com/data/icons/the-essentials/53/arrow-turn-around-circle-continuous-512.png"
+                                    alt="">
+                                <img src="https://static.vecteezy.com/system/resources/previews/019/787/061/non_2x/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <span class="j_gray">Dried Fruit </span>
+                            <a href="#" class="j_a1">
+                                <span>Meat</span>
+                            </a>
+                            <h1>$30.00</h1><span class="j_a2">$36.00</span>
+                        </div>
+                    </div>
+
+                    <div class="j_item">
+                        <img src="./images/dried_fruit.png" alt="">
+                        <span class="j_red-text">-20%</span>
+                        <!-- 얘한테 hover시 변화 -->
+                        <div class="j_hover">
+                            <!-- 한줄로 나열 -->
+                            <div class="j_img2">
+                                <img src="https://www.freeiconspng.com/thumbs/heart-icon/valentine-heart-icon-6.png"
+                                    alt="">
+                                <img src="https://cdn4.iconfinder.com/data/icons/the-essentials/53/arrow-turn-around-circle-continuous-512.png"
+                                    alt="">
+                                <img src="https://static.vecteezy.com/system/resources/previews/019/787/061/non_2x/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <span class="j_gray">Dried Fruit</span>
+                            <a href="#" class="j_a1">
+                                <span>Mixed Fruits</span>
+                            </a>
+                            <h1>$30.00</h1><span class="j_a2">$36.00</span>
+                        </div>
+                    </div>
+
+                    <div class="j_item">
+                        <img src="./images/fresh_fruit.png" alt="">
+                        <span class="j_red-text">-20%</span>
+                        <!-- 얘한테 hover시 변화 -->
+                        <div class="j_hover">
+                            <!-- 한줄로 나열 -->
+                            <div class="j_img2">
+                                <img src="https://www.freeiconspng.com/thumbs/heart-icon/valentine-heart-icon-6.png"
+                                    alt="">
+                                <img src="https://cdn4.iconfinder.com/data/icons/the-essentials/53/arrow-turn-around-circle-continuous-512.png"
+                                    alt="">
+                                <img src="https://static.vecteezy.com/system/resources/previews/019/787/061/non_2x/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="j_explain">
+                            <span class="j_gray">Dried Fruit</span>
+                            <a href="#" class="j_a1">
+                                <span>Mango</span>
+                            </a>
+                            <h1>$30.00</h1><span class="j_a2">$36.00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
