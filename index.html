@@ -34,7 +34,7 @@
         /* 부모 크기의 1/3 에서 여백으로 줄 10px을 뺀 크기만큼 width를 준다 */
         width: calc(100%/4 - 30px);
         box-shadow: 4px 4px 4px 4px #DDDDDD;
-        background-color: #BBBBBB;
+        background-color: #EEEEEE;
 
     }
     .s_item a{
@@ -44,7 +44,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #FFFFFF;
+        background-color: #EEEEEE;
         border: 0.1px gray solid;
         font-size: 20px;
         font-weight: bold;
@@ -71,6 +71,67 @@
     
 }
 
+.s_main_banner_text{
+    display: flex;
+    flex-direction: column;   
+}
+
+.s_main_banner_text span:nth-child(1){
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(23, 180, 23);
+    margin-bottom: 10px;
+}
+
+.s_main_banner_text span:nth-child(2){
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.s_main_banner_text span:nth-child(3){
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.s_main_banner_text span:nth-child(4){
+    font-size: 17px;
+    text-decoration: none;
+    color: gray;
+    margin-top: 15px;
+}
+
+.s_shop_now{
+    height: 100%;
+    background-color: rgb(137, 199, 44);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 35px;
+    border: 0;
+    text-decoration: none;
+}
+
+.s_shop_now a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
 
     </style>
 </head>
@@ -78,6 +139,11 @@
 <body>
     <div class="s_container"> <!--container 열기-->
         <div class="s_top_banner">
+            <div class="s_top_banner_mail_ico">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                </svg>
+            </div>
             <div class="s_top_banner_mail">
                 <span>hello@colorlib.com</span>
             </div>
@@ -183,12 +249,21 @@
                     </button>
                 </div>
                 <div class="s_main_banner">
-                    <div class="s_main_banner_image">
-                        <img src="./images/fruit_fresh.png" alt="">
-                    </div>
                     <div class="s_main_banner_text">
-                        <a href="">fruit fresh</a>
+                        <span href="">FRUIT FRESH</span>
+                        <span href="">Vegetable</span>
+                        <span href="">100% Organic</span>
+                        <span href="">Free Pickup and Delivery Available</span>
+                        <div>
+                            <button class="s_shop_now">
+                                    <a href="./shop.html">SHOP NOW</a>
+                            </button>
+                        </div>
                     </div>
+                    <div class="s_main_banner_image">
+                        <img src="./images/fruit_fresh1.png" alt="">
+                    </div>
+
                 </div>
             </div>                
         </ul>
