@@ -1,46 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        div{
-            border: 1px solid black;
+        div {
+            border: 0px solid black;
         }
 
-        .tomato{
+        /* 토마토 스타일 */
+        .tomato {
             width: 1900px;
             height: 150px;
-            overflow: hidden;
             position: relative;
         }
 
-        .tomato > img{
+        .tomato>img {
             width: 100%;
+            height: 100%;
         }
 
-        .tomato > h1{
+        .tomato>h1 {
             position: absolute;
+            top: 25px;
+            left: 50%;
+            color: white;
         }
 
-        .tomato > h4{
+        .tomato>h4 {
             position: absolute;
+            top: 70px;
+            left: 50%;
+            color: white;
         }
-    
+
+        /* 토마토 스타일 */
+
+        .first {
+            display: flex;
+            justify-content: space-around;
+            padding: 80px;
         }
+
+        .search {
+            margin: 90px;
+        }
+
+        .categories>h3 {
+            color: #AAAAAA;
+            cursor: pointer;
+        }
+
+        .pictures>img {
+            border: 0px solid black;
+            width: 400px;
+        }
+
+        .pictures>h2 {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .pictures>h4 {
+            font-size: 16px;
+        }
+
+        .pictures>span {
+            border: 10px black;
+            cursor: pointer;
+        }
+
+        /* first */
+
+        /* second */
+
+        .bic-pictures {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .small-pictures-a {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .small-pictures>img {
+            border: 0px solid black;
+            width: 150px;
+        }
+
+        .small-pictures-text {
+            font-size: 15px;
+        }
+
+        .small-pictures-text>span {
+            color: #AAAAAA;
+            font-size: 12px;
+        }
+
+        /* second */
     </style>
 </head>
+
 <body>
+
     <div class="container">
 
+        <!-- 토마토 바디 -->
+
         <div class="tomato">
-            <img src="https://lh6.googleusercontent.com/proxy/hdmTTif6kyNBsGyhTzpinjTTbiNRjyAhINKN-wkeX8vLCHndw9ISHYlficyp5QiVz9d8-Qut7UlBsfQOqFJrTBvt7a_Rgafogi0wy5A1BkoUgQ" alt="">
+
+            <img src="https://lh6.googleusercontent.com/proxy/hdmTTif6kyNBsGyhTzpinjTTbiNRjyAhINKN-wkeX8vLCHndw9ISHYlficyp5QiVz9d8-Qut7UlBsfQOqFJrTBvt7a_Rgafogi0wy5A1BkoUgQ"
+                alt="">
             <h1>Blog</h1>
             <h4>Home - Blog</h4>
 
-        </div>
+            <!-- 토마토 바디 -->
 
-    </div>
+            <div class="first">
+
+                <div class="search">
+                    <!-- 텍스트 바디 -->
+                    <input type="text">
+                    <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search-heart" viewBox="0 0 16 16">
+                            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018" />
+                            <path
+                                d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11" />
+                        </svg></button>
+                    <!-- 텍스트 바디 -->
+
+                    <!-- 카테고리 바디 -->
+
+                    <div class="categories">
+
+                        <h1>Categories</h1>
+                        <h3>All</h3>
+                        <h3>Beauty (20)</h3>
+                        <h3>food (5)</h3>
+                        <h3>Life Style (9)</h3>
+                        <h3>Travel (10)</h3>
+
+                        <!-- 카테고리 바디 -->
+
+                    </div>
+                </div>
+                <div class="pictures">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="">
+                    <h2>May 6ways to prepare breakfast for 30</h2>
+                    <h4>Sed quia non numquam modi tempora indunt ut<br> labore et dolore magnam aliquam quaerat</h4>
+                    <br>
+                    <SPan>READ MORE</SPan>
+                </div>
+
+                <div class="pictures">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcg2Ax_SmIK80PqSEhlEkCyC-23qPZROio2A&s"
+                        alt="">
+                    <h2>May 6ways to prepare breakfast for 30</h2>
+                    <h4>Sed quia non numquam modi tempora indunt ut<br> labore et dolore magnam aliquam quaerat</h4>
+                    <br>
+                    <SPan>READ MORE</SPan>
+                </div>
+
+            </div>
+
+            <div class="second">
+                <div class="news">
+                    <h2>Recent News</h2>
+                </div>
+                <div class="bic-pictures">
+                    <div>
+                        <div class="small-pictures-a">
+                            <div class="small-pictures">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbLxxhUjtbWgqscTWjUGrqF9atwOpG-sON9w&s"
+                                    alt="">
+                            </div>
+                            <div class="small-pictures-text">
+                                <h4>09 Kinds Of Vegetables <br> Protect The Liver</h4>
+                                <br>
+                                <span>MAR 05, 2019</span>
+                            </div>
+                        </div>
+
+                        <div class="small-pictures-a">
+                            <div class="small-pictures">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj-i8qzErqx4M2CWkBU219BSnGx5yfeFQesA&s"
+                                    alt="">
+                            </div>
+                            <div class="small-pictures-text">
+                                <h4>09 Kinds Of Vegetables <br> Protect The Liver</h4>
+                                <br>
+                                <span>MAR 05, 2019</span>
+                            </div>
+                        </div>
+
+                        <div class="small-pictures-a">
+                            <div class="small-pictures">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6HvrF0Q5j2Vgxt8pwjyeOPorPTyiR9GuTog&s"
+                                    alt="">
+                            </div>
+                            <div class="small-pictures-text">
+                                <h4>09 Kinds Of Vegetables <br> Protect The Liver</h4>
+                                <br>
+                                <span>MAR 05, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pictures">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgY2waUCCLpFW_iHw58fLT8jYaouPgPQH0XQ&s"
+                            alt="">
+                        <h2>May 6ways to prepare breakfast for 30</h2>
+                        <h4>Sed quia non numquam modi tempora indunt ut<br> labore et dolore magnam aliquam quaerat</h4>
+                        <br>
+                        <SPan>READ MORE</SPan>
+                    </div>
+
+                    <div class="pictures">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSayPCgoqTza-NgF0oS8-iF-ChoaXEryw5X5Q&s"
+                            alt="">
+                        <h2>May 6ways to prepare breakfast for 30</h2>
+                        <h4>Sed quia non numquam modi tempora indunt ut<br> labore et dolore magnam aliquam quaerat</h4>
+                        <br>
+                        <SPan>READ MORE</SPan>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 </body>
+
 </html>
